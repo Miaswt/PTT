@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aparecium</title>
+<style>
+/* Blue theme */
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    background-color: #b0e0e6; /* Light blue heading background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #add8e6; /* Light blue button background */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #87ceeb; /* Light blue button background on hover */
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent black background */
+    z-index: 9999; /* Ensure popup is on top */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Shadow effect */
+}
+
+/* Animation for Nah button */
+@keyframes moveButton {
+    0% { top: 0; left: 0; }
+    25% { top: 50px; left: 50px; }
+    50% { top: 0; left: 100px; }
+    75% { top: -50px; left: 50px; }
+    100% { top: 0; left: 0; }
+}
+
+.nah-button {
+    animation: moveButton 5s infinite; /* Looping animation */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Will you go on a date with me?</h1>
+    <button onclick="showPopup()">Aparecium</button>
+</div>
+
+<!-- Popup for Yes/No options -->
+<div id="optionsPopup" class="popup">
+    <div class="popup-content">
+        <h2>What's your choice?</h2>
+        <button onclick="showCongratsPopup()">Yes</button>
+        <button class="nah-button" onclick="moveNahButton()">Nah</button>
+    </div>
+</div>
+
+<!-- Popup for Congratulations -->
+<div id="congratsPopup" class="popup">
+    <div class="popup-content">
+        <h2>Congratulations!</h2>
+        <p>Your choice is very good. See you soon!</p>
+    </div>
+</div>
+
+<!-- Image and Music -->
+<img src="https://64.media.tumblr.com/16bc3f22d53ae78b1eec5f261315e038/782ba285183943aa-17/s640x960/44b367f98fa67750ae7a4cebd2d2ee47b7d659ca.gif" alt="Image" style="display:block; margin:20px auto; max-width:80%;">
+<audio controls autoplay>
+    <source src="https://www.youtube.com/watch?v=Q8UWmDoZc4U&t=5s" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+function showPopup() {
+    document.getElementById('optionsPopup').style.display = 'block';
+}
+
+function showCongratsPopup() {
+    document.getElementById('optionsPopup').style.display = 'none';
+    document.getElementById('congratsPopup').style.display = 'block';
+}
+
+function moveNahButton() {
+    // Button movement animation
+    var button = document.querySelector('.nah-button');
+    button.style.animation = 'none'; // Pause animation
+    setTimeout(function() {
+        button.style.animation = ''; // Resume animation
+    }, 10);
+}
+
+// Close popups when clicking outside
+window.onclick = function(event) {
+    var popups = document.getElementsByClassName('popup');
+    for (var i = 0; i < popups.length; i++) {
+        if (event.target == popups[i]) {
+            popups[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
