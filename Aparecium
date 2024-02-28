@@ -104,7 +104,7 @@ button:hover {
 <!-- Image and Music -->
 <img src="https://64.media.tumblr.com/16bc3f22d53ae78b1eec5f261315e038/782ba285183943aa-17/s640x960/44b367f98fa67750ae7a4cebd2d2ee47b7d659ca.gif" alt="Image" style="display:block; margin:20px auto; max-width:80%;">
 <audio controls autoplay>
-    <source src="https://www.youtube.com/watch?v=Q8UWmDoZc4U&t=5s" type="audio/mpeg">
+    <source src="https://www.youtube.com/watch?v=b_EF-fRnqWs" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
