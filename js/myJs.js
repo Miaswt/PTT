@@ -4,7 +4,7 @@ const textConfig = {
   text5: "Nah",
   text6: "Yes ^^",
   text7: "Congratulation! Your choice is very good :D",
-  text10: "Why don't you text me yet baby boo?",
+  text10: "Why don't you text me yet babi boo?",
   text12: "Apparate!",
 };
 
@@ -30,13 +30,13 @@ $(document).ready(function () {
       // title: textConfig.text1,
       text: textConfig.text2,
       // imageUrl: "img/goldenSnitch.png",
-      // imageWidth: 280,
-      // imageHeight: 280,
-      // html: "<div><img src='img/goldenSnitch.png' style='margin-left: 90px;'/><h2>'I open at the Close'</h2></div>",
+      // imageWidth: 300,
+      // imageHeight: 300,
+      // html: "<div><img src='img/goldenSnitch.png' style='margin-left: 100px;'/><h2>'I open at the Close'</h2></div>",
       html: `
       <div style='position: relative; display: inline-block;margin-bottom: 30px'>
         <img src='img/goldenSnitch.png' style='display: block;margin-left: 80px;'>
-        <h2 style='position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; color: white; text-align: center; padding-top: 80%; padding-right: 60px;'>
+        <h2 style='position: absolute; top: 12; left: 0; width: 84%; height: 100%; z-index: 2; color: white; text-align: center; padding-top: 75%; padding-right: 60px; font-size: 0.7rem'>
           I open at the Close
         </h2>
       </div>
@@ -68,7 +68,7 @@ $(document).ready(function () {
     $("#yes").css("left", leftNo);
     $("#yes").css("top", topNO);
   }
-  // move random button póition
+  // move random button position
   function moveButton() {
     var audio = new Audio("sound/Swish1.mp3");
     audio.play();
@@ -148,7 +148,7 @@ $(document).ready(function () {
       // html: true,
       width: 900,
       padding: "3em",
-      html: "<p style='font-size: 25px'>Why don't you text me yet cutie?</p>",
+      html: "<p style='font-size: 25px'>Why don't you text me yet babi boo?</p>",
       background: '#fff url("img/iput-bg.jpg")',
       backdrop: `
                     rgba(0,0,123,0.4)
@@ -163,7 +163,7 @@ $(document).ready(function () {
       cancelButtonColor: "#f6cd61",
       confirmButtonText: textConfig.text12,
       onClose: () => {
-        window.location = "http://fb.com";
+        window.location = "https://www.facebook.com/miaswtt/";
       },
     })
     // .then((result) => {
@@ -178,7 +178,7 @@ $(document).ready(function () {
     //       text: textConfig.text11,
     //       confirmButtonColor: "#83d0c9",
     //       onClose: () => {
-    //         window.location = "http://fb.com";
+    //         window.location = "https://www.facebook.com/miaswtt/";
     //       },
     //     });
     //   }
