@@ -32,13 +32,25 @@ $(document).ready(function () {
       // imageUrl: "img/goldenSnitch.png",
       // imageWidth: 280,
       // imageHeight: 280,
-      html: "<div><img src='img/goldenSnitch.png'/><h2>'I open at the Close'</h2></div>",
+      // html: "<div><img src='img/goldenSnitch.png' style='margin-left: 90px;'/><h2>'I open at the Close'</h2></div>",
+      html: `
+      <div style='position: relative; display: inline-block;margin-bottom: 30px'>
+        <img src='img/goldenSnitch.png' style='display: block;margin-left: 80px;'>
+        <h2 style='position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; color: white; text-align: center; padding-top: 80%; padding-right: 60px;'>
+          I open at the Close
+        </h2>
+      </div>
+    `,
       background: 'transparent',
-      imageAlt: "Custom image",
-      confirmButtonText:"Aparecium",
+      imageAlt: 'Custom image',
+      confirmButtonText: 'Aparecium',
     }).then(function () {
-      $(".content").show(200);
-    });
+      // $('.content').show(200)
+
+      $('.content').show(200, function() {
+        $('#bg').css('background-image', 'url(https://media.istockphoto.com/id/895389774/vector/magic-night-dark-blue-sky-with-sparkling-stars.jpg?s=612x612&w=0&k=20&c=-l7avkMu0tuc_7knlAMGGq3XlavdgSvYUVn6PpNFDyg=)');
+      });
+    })
   }
 
   // switch button position
