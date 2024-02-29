@@ -30,13 +30,13 @@ $(document).ready(function () {
       // title: textConfig.text1,
       text: textConfig.text2,
       // imageUrl: "img/goldenSnitch.png",
-      // imageWidth: 300,
-      // imageHeight: 300,
+      // imageWidth: 350,
+      // imageHeight: 350,
       // html: "<div><img src='img/goldenSnitch.png' style='margin-left: 100px;'/><h2>'I open at the Close'</h2></div>",
-      html: `
+     html: `
       <div style='position: relative; display: inline-block;margin-bottom: 30px'>
-        <img src='img/goldenSnitch.png' style='display: block;margin-left: 80px;'>
-        <h2 style='position: absolute; top: 12; left: 0; width: 84%; height: 100%; z-index: 2; color: white; text-align: center; padding-top: 75%; padding-right: 60px; font-size: 0.7rem'>
+        <img src='img/goldenSnitch.png' style='display: block;margin-left: 90px;'>
+        <h2 style='position: absolute; top: 8; left: 0; width: 98%; height: 100%; z-index: 2; color: #f8f9fa; text-align: center; padding-top: 75%; padding-right: 60px; font-size: 0.7rem'>
           I open at the Close
         </h2>
       </div>
@@ -134,7 +134,7 @@ $(document).ready(function () {
     //   // imageUrl: "img/goldenSnitch.png",
     //   background: "transparent",
     //   showCancelButton: false,
-    //   // confirmButtonColor: "#3085d6",
+    //   // confirmButtonColor: "#29b649",
     //   cancelButtonColor: "#d33",
     //   // confirmButtonColor: "#fe8a71",
     //   cancelButtonColor: "#f6cd61",
@@ -157,7 +157,7 @@ $(document).ready(function () {
                     no-repeat
                   `,
       showCancelButton: false,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#29b649",
       cancelButtonColor: "#d33",
       confirmButtonColor: "#fe8a71",
       cancelButtonColor: "#f6cd61",
